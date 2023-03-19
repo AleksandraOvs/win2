@@ -87,14 +87,14 @@
       </div>
       <div class="delivery__inner">
         <div class="delivery__item">
-          <img class="delivery__img" width="90" height="90" src="images/icon/punkt.svg" alt="punkt">
+          <img class="delivery__img" width="90" height="90" src="<?php echo get_stylesheet_directory_uri()?>/images/icon/punkt.svg" alt="punkt">
           <div class="delivery__text">
             Отправляем любым доступным и удобным для вас способом! Так же есть возможность самовывоза из нашего офиса в
             Москве.
           </div>
         </div>
         <div class="delivery__item">
-          <img class="delivery__img" width="90" height="90" src="images/icon/punkt.svg" alt="punkt">
+          <img class="delivery__img" width="90" height="90" src="<?php echo get_stylesheet_directory_uri()?>/images/icon/punkt.svg" alt="punkt">
           <div class="delivery__text">
             Мы проверяем каждое изделие перед отправкой не смотря на то что специалисты компании Winning неоднократно
             проверяют каждое изделие перед каждой продажей.
