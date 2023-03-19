@@ -58,9 +58,24 @@
           <?php
         }
         ?>
-        <a class="footer__tel" href="<?php echo carbon_get_theme_option('footer_tel_contact_link' ) ?>">
-         <?php echo carbon_get_theme_option('footer_tel_contact' ) ?>
-       </a>
+
+        <?php if ($tels = carbon_get_theme_option(get_the_ID(), 'footer_contacts_tel')){
+          
+          foreach ($tels as $tel){
+            ?>
+
+            <a class="footer__tel" href="<?php echo $tel[('footer_tel_contact_link')]; ?>">
+            <?php echo $tel[('footer_tel_contact')]; ?></a>
+            <?php
+            
+          }
+
+        }
+    ?>
+
+
+
+        
      </div> 
    </div>
    <div class="footer__copyright">
