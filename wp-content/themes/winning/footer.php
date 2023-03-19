@@ -59,7 +59,7 @@
         }
         ?>
 
-        <?php if ($tels = carbon_get_theme_option(get_the_ID(), 'footer_contacts_tel')){
+        <?php if ($tels = carbon_get_theme_option('footer_contacts_tel')){
           
           foreach ($tels as $tel){
             ?>
