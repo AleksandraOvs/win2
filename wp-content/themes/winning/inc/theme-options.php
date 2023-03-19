@@ -14,17 +14,17 @@ Container::make('theme_options', 'Настройки сайта')
         ->help_text('ссылка на телефон вида tel:+700000000'),
     Field::make('text', 'header_tel_contact', 'Номер телефона')
         ->set_width(50)
-        ->help_text('Номер телефона, отображающийся на сайте'),
+        ->help_text('Номер телефона, отображающийся на сайте')
             
-    Field::make('complex', 'header_contacts', 'Ссылки на мессенджеры/соцсети в шапке сайта')
-        ->add_fields( array(
-            Field::make('text', 'header_contact_name', 'Мессенджер/соцсеть')
-                ->set_width(33),
-            Field::make('image', 'header_contact_image', 'Иконка контакта')
-                ->set_width(33),    
-            Field::make('text', 'header_contact_link', 'Ссылка на контакт')
-                ->set_width(33),
-        ))
+    // Field::make('complex', 'header_contacts', 'Ссылки на мессенджеры/соцсети в шапке сайта')
+    //     ->add_fields( array(
+    //         Field::make('text', 'header_contact_name', 'Мессенджер/соцсеть')
+    //             ->set_width(33),
+    //         Field::make('image', 'header_contact_image', 'Иконка контакта')
+    //             ->set_width(33),    
+    //         Field::make('text', 'header_contact_link', 'Ссылка на контакт')
+    //             ->set_width(33),
+    //     ))
     
 ))
 

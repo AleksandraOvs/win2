@@ -204,25 +204,25 @@ function custom_pagination() {
 
     }
 
-    function disable_visual_editor($can)
+//     function disable_visual_editor($can)
 
-{
+// {
 
-    global $post;
+//     global $post;
 
-    $page_template = get_post_meta($post->ID, '_wp_page_template', true);
+//     $page_template = get_post_meta($post->ID, '_wp_page_template', true);
 
-    if ($page_template == '25') {
+//     if ($page_template == '25') {
 
-        return false;
+//         return false;
 
-    }
+//     }
 
-    return $can;
+//     return $can;
 
-}
+// }
 
-add_filter('user_can_richedit', 'disable_visual_editor');
+// add_filter('user_can_richedit', 'disable_visual_editor');
 
 
 
