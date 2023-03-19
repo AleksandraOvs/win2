@@ -125,31 +125,18 @@
   </div>
 </div>
 </div>
+
+ <?php
+        if ($politics = carbon_get_theme_option('personal_data_text')){
+          ?>
 <div id="politics" class="popup politics">
   <div class="popup__body">
     <div class="popup__content ">
 
       <div class="politics__inner">
-        <h2>
-          Lorem ipsum dolor 
-        </h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aliquam, explicabo quis maxime, porro cumque possimus optio laboriosam, quaerat culpa assumenda? Impedit id alias soluta necessitatibus dolorem exercitationem deserunt ut.
-        </p>
-        <ul>
-          <li>
-            1.1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quidem architecto veniam nam dicta, ut iure repellendus magni repudiandae necessitatibus assumenda non laboriosam, alias eligendi hic voluptatum illo nobis quis!
-          </li>
-          <li>
-            1.2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quidem architecto veniam nam dicta, ut iure repellendus magni repudiandae necessitatibus assumenda non laboriosam, alias eligendi hic voluptatum illo nobis quis!
-          </li>
-          <li>
-            1.3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quidem architecto veniam nam dicta, ut iure repellendus magni repudiandae necessitatibus assumenda non laboriosam, alias eligendi hic voluptatum illo nobis quis!
-          </li>
-        </ul>
-        <h3>
-          Lorem ipsum dolor 
-        </h3>
+     
+          <?php echo $politics; ?>
+       
       </div>
 
       <a href="#" class="popup__close popup--close">
@@ -164,7 +151,8 @@
   </div>
 </div>
 </div>
-
+<?php }
+      ?> 
 <?php wp_footer(); ?>
 
 

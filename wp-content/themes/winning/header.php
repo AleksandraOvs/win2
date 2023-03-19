@@ -45,10 +45,11 @@
         </nav>
 
       </div>
-
+      
       <div class="header__right">
-
-        <a class="header__tel tel btn" href="tel:+79062629121">
+      <?php if ($head_phone = carbon_get_theme_option('header_tel_contact_link')){
+        ?>
+        <a class="header__tel tel btn" href="<?php echo $head_phone; ?>">
           <span>Позвонить</span>
           <svg class="header__tel-icon" width="21" height="20" viewBox="0 0 21 20" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -59,13 +60,36 @@
 
         </a>
 
+      <?php } ?>
+      
         <button class="header__burger burger js-toggle-menu" type="button">
           <span class="burger__line"></span>
           <span class="sr-only">open/close menu</span>
         </button>
-
+        <?php 
+if( $contacts = carbon_get_theme_option('header_contacts' ) ) {
+    ?>
+    <ul class="header__social social">
+        <?php
+	foreach( $contacts as $contact ) {
+    ?>
+     <li class="social__item">
+    <a href="<?php echo $contact[ 'header_contact_link']; ?>" class="social__link">
+  <?php
+    $thumb_head_contact = wp_get_attachment_image_url( $contact['header_contact_image'], 'full' );
+?>
+<img class="social__img" width="25" height="25" src="<?php echo $thumb_head_contact; ?>" alt="<?php echo $contact[ 'header_contact_name']; ?>">
+  </a>
+    </li>
+<?php
+	}
+    ?>
+    </ul>
+    <?php
+}
+?>
       </div>
-
+      
     </div>
 
   </div>

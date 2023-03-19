@@ -266,7 +266,7 @@ function my_user_vote2() {
 		$body .= "Цвет: <div style='width: 20px;height: 20px; background: " . $color_code . ";'></div><br>";
 		$body .= "Размер: " . $size . "<br>";
 
-		$body .= "Времени осталось: " . $hour . "ч " . $minute . "м " . $seconds . "с<br>";
+		$body .= "Счетчик на момент отправки: " . $hour . "ч " . $minute . "м " . $seconds . "с<br>";
 		
 
 		// $mail->AddReplyTo("webmaster@test.ch","Test Lernt");
@@ -276,7 +276,7 @@ function my_user_vote2() {
 		// $mail->AddAddress($address);
 		$address = "Aleksandra.ovsia@gmail.com";
 		$mail->AddAddress($address);
-		$mail->Subject    = "Заявка с win03";
+		$mail->Subject    = "Заявка с сайта WINNING";
         $mail->AltBody    = ""; // optional, comment out and test
 
         $mail->MsgHTML($body);
