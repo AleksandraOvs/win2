@@ -25,7 +25,13 @@
         display: block;
     }
     .promo__video-wrap {
+        order: 1;
     width: 100%;
+}
+
+.promo__content {
+    margin-top: 70px;
+    order: 2;
 }
 video.promo__video {
     width: 100%;
