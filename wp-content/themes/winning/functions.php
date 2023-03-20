@@ -20,7 +20,7 @@ function vidi_scripts(){
 
     wp_enqueue_style ('slick_styles', get_stylesheet_directory_uri() . '/libs/slick.css', array(), time());
     wp_enqueue_style ('wp_styles', get_stylesheet_directory_uri() . '/css/wp-styles.css', array(), time());
-    wp_enqueue_style ('main_styles', get_stylesheet_directory_uri() . '/css/style.min.css', array(), time());
+    wp_enqueue_style ('main_styles', get_stylesheet_directory_uri() . '/css/style.css', array(), time());
     wp_enqueue_style ('add_styles', get_stylesheet_directory_uri() . '/css/add-style.css', array(), time());
    
     };
