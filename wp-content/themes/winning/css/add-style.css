@@ -1,4 +1,4 @@
-.promo__img {
+.promo__video-wrap {
     display: none;
 }
 
@@ -21,8 +21,8 @@
     text-align: center;
 }
 @media (max-width: 768px){
-    .promo__img {
-        display: block;
+    .promo__video-wrap {
+        display: block !important;
     }
     .promo__video-wrap {
         order: 1;
