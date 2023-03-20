@@ -741,7 +741,7 @@ body {
 }
 .promo {
     padding-top: 20px;
-    padding-bottom: 180px;
+    padding-bottom: 0; 
 }
 .promo__inner {
     display: -webkit-box;
