@@ -1,3 +1,7 @@
+.promo__img {
+    display: none;
+}
+
 .products__small-img-wrap {
     position: relative;
 }
@@ -17,6 +21,9 @@
     text-align: center;
 }
 @media (max-width: 768px){
+    .promo__img {
+        display: block;
+    }
     .promo__video-wrap {
     width: 100%;
 }

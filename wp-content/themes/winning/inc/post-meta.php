@@ -17,6 +17,7 @@ Container::make('post_meta', 'Контент для страницы')
         ->set_width(10),
         Field::make( 'image', 'crb_hero_picture', 'Изображение для первого экрана' )
         ->set_value_type('url')
+        ->help_text( 'Отображается на экранах меньше 768px' )
         ->set_width(60),
         Field::make( 'text', 'crb_video_link', 'Ссылка на видео' ),
         Field::make('text', 'crb_about', 'Информация о Winning'),

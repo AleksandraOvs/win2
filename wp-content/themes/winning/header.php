@@ -14,7 +14,7 @@
 <header class="header">
   <div class="container">
     <div class="header__inner">
-        <a href="/" class="header-logo">
+        <div class="header-logo">
   <?php
   $header_logo = get_theme_mod('header_logo');
   $img = wp_get_attachment_image_src($header_logo, 'full');
@@ -22,7 +22,7 @@
     ?>
     <img src="<?php echo $img[0]; ?>" alt="">
   <?php endif; ?>
-</a>
+  </div>
 
       <div class="header__menu">
 
