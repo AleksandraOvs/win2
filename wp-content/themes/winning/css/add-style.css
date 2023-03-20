@@ -1,7 +1,9 @@
 /* .promo__video-wrap {
     display: none;
 } */
-
+.promo {
+    padding-bottom: 70px;
+}
 .products__small-img-wrap {
     position: relative;
 }
