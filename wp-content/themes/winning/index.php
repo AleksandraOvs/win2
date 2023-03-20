@@ -66,7 +66,7 @@
 
       ?>
 
-      <video class="promo__video" pip="false" video autoplay loop muted playsinline webkit-playinginline poster="<?php echo get_stylesheet_directory_uri() . '/images/products/1.jpg'?>">
+      <video class="promo__video" pip="false" video autoplay loop muted playsinline webkit-playinginline poster="<?php echo get_stylesheet_directory_uri() . '/images/video/poseter.jpg'?>">
 
       <?php 
 
@@ -83,6 +83,8 @@
       ?>
 
       </video>
+
+    
           <a class="promo__btn promo__btn_mob btn js-to-section" href="#products">
             Перейти к каталогу
           </a>
