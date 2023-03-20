@@ -32,17 +32,17 @@
             Перейти к каталогу
           </a>
         </div>
-        <div class="promo__pic-wrap">
+        <!-- <div class="promo__pic-wrap">
             <?php
-                $pic = carbon_get_post_meta(get_the_ID(), 'crb_hero_picture' );
-                if (!empty($pic)) :
+                //$pic = carbon_get_post_meta(get_the_ID(), 'crb_hero_picture' );
+                //if (!empty($pic)) :
                 ?>
-                <img class="promo__img" width="620" height="450" src="<?php echo $pic; ?>" alt="promo">
+                <img class="promo__img" width="620" height="450" src="<?php //echo $pic; ?>" alt="promo">
                 <?php
-                endif;
+                //endif;
                 ?>
         
-        </div>
+        </div> -->
       </div>
 
       <?php
