@@ -32,7 +32,7 @@
             Перейти к каталогу
           </a>
         </div>
-        <div class="promo__video-wrap">
+        <div class="promo__pic-wrap">
             <?php
                 $pic = carbon_get_post_meta(get_the_ID(), 'crb_hero_picture' );
                 if (!empty($pic)) :

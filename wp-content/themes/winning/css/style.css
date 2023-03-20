@@ -755,6 +755,9 @@ body {
     align-items: center;
     margin-bottom: 160px;
 }
+.promo__pic-wrap{
+    display:none;
+}
 .promo__img {
     -o-object-fit: contain;
     object-fit: contain;
@@ -813,6 +816,9 @@ body {
     }
     .promo__video-link {
         margin-bottom: 30px;
+    }
+    .promo__pic-wrap{
+        display:block;
     }
 }
 .footer__politics,
