@@ -1,4 +1,4 @@
-._fixed,
+/* ._fixed, */
 .products,
 .sr-only {
     overflow: hidden;
@@ -486,8 +486,8 @@ body {
         transition: 0.3s;
     }
     .menu._open {
-        height: auto;
-        padding-bottom: 50px;
+        /* height: auto;
+        padding-bottom: 50px; */
         -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
         transform: translateY(0);
