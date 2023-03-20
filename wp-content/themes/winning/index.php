@@ -51,13 +51,38 @@
 
       <?php if (!empty($crb_link)) : ?>
       <div class="promo__video">
-        <div class="promo__video-wrap">
-          <a class="promo__video-link" target="_blank" href="<?php echo $crb_link;?>">
+       
+          <!-- <a class="promo__video-link" target="_blank" href="<?php echo $crb_link;?>">
             <iframe width="100%" height="450" src="<?php echo $crb_link;?>"
               title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen></iframe>
-          </a>
+          </a> -->
+          <div class="promo__video-wrap">
+
+      <?php 
+
+      $gallery = carbon_get_post_meta(get_the_ID(), 'crb_hero_video' );
+
+      ?>
+
+      <video class="promo__video" pip="false" video autoplay loop muted playsinline webkit-playinginline poster="<?php echo get_stylesheet_directory_uri() . '/images/products/1.jpg'?>">
+
+      <?php 
+
+      foreach( $gallery  as $v => $video){
+
+        $video_url =  wp_get_attachment_url( $video );
+
+        $this_ext = end(explode(".", $video_url));
+
+      echo '<source src="'.wp_get_attachment_url( $video ).'"' . 'type="video/' . $this_ext . ' " ' . '>'; 
+
+      }
+
+      ?>
+
+      </video>
           <a class="promo__btn promo__btn_mob btn js-to-section" href="#products">
             Перейти к каталогу
           </a>

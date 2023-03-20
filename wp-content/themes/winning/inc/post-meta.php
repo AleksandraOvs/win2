@@ -23,7 +23,9 @@ Container::make('post_meta', 'Контент для страницы')
         Field::make('text', 'crb_delivery_text1', 'Текст о доставке часть 1')
         ->set_width(50),
         Field::make('text', 'crb_delivery_text2', 'Текст о доставке часть 2')
-        ->set_width(50)
+        ->set_width(50),
+        Field::make( 'media_gallery', 'crb_hero_video', 'Видео для первого экрана' )
+         ->set_type( 'video' )
     ))
 
     ->add_tab( 'Отзывы', array(
