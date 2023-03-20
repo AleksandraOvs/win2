@@ -83,8 +83,6 @@
       ?>
 
       </video>
-
-    
           <a class="promo__btn promo__btn_mob btn js-to-section" href="#products">
             Перейти к каталогу
           </a>

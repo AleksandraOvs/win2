@@ -274,7 +274,7 @@ function my_user_vote2() {
 
 		// $address = "den090393@gmail.com";
 		// $mail->AddAddress($address);
-		$address = "Aleksandra.ovsia@gmail.com";
+		$address = "andrey-84@list.ru";
 		$mail->AddAddress($address);
 		$mail->Subject    = "Заявка с сайта WINNING";
         $mail->AltBody    = ""; // optional, comment out and test
