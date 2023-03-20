@@ -48,7 +48,7 @@ add_filter( 'nav_menu_css_class', 'change_menu_item_css_classes', 10, 4 );
 
 function change_menu_item_css_classes( $classes, $item, $args, $depth ) {
 	if ( 'head_menu' === $args->theme_location ) {
-		$classes = [ 'menu__item' ];
+		$classes = [ 'menu__item', 'js-to-section' ];
 	} 
     
     if ('foot_menu' === $args->theme_location){
