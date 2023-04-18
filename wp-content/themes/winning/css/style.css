@@ -993,7 +993,12 @@ body {
     background: linear-gradient(263.75deg, #63abf3 3%, #3600d3 101.75%);
     color: #fff;
     -webkit-box-shadow: 0 0 13px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 0 13px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0 0 13px rgba(0, 0, 0, 0.25); */
+}
+.about:before{
+    background-color: #63abf3;
+    background: -o-linear-gradient(186.25deg, #63abf3 3%, #3600d3 101.75%);
+    background: linear-gradient(263.75deg, #63abf3 3%, #3600d3 101.75%);
 }
 .about::after {
     right: 0;
@@ -1121,6 +1126,7 @@ body {
     .about__inner::before {
         background-image: url(../images/about/dec3.png);
         top: -160px;
+        display:none;
     }
 }
 .reviews__slide {
@@ -1627,6 +1633,10 @@ body {
         padding: 11px 5px;
     }
     .about {
+        background: -o-linear-gradient(295.25deg, #3600d3 0, #63abf3 73.62%);
+        background: linear-gradient(154.75deg, #3600d3 0, #63abf3 73.62%);
+    }
+    .about:before{
         background: -o-linear-gradient(295.25deg, #3600d3 0, #63abf3 73.62%);
         background: linear-gradient(154.75deg, #3600d3 0, #63abf3 73.62%);
     }
