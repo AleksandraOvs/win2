@@ -1797,11 +1797,58 @@ body {
     transition: opacity 0.3s;
 }
 .footer-form__name, .footer-form__tel {
+    position:relative;
     border: 1px solid #fff;
     padding: 7px 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-radius: 25px;
 }
+.wpcf7-form{
+    position:relative;
+}
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output,
+.wpcf7 form.sent .wpcf7-response-output {
+    background: #3600d3;
+    color: #fff;
+    border: none;
+    position: absolute;
+    top: -30%;
+    margin: 0 auto;
+    left: 0;
+    font-size: 12px;
+    right: 0;
+}
+.wpcf7-form.wpcf7-response-output, .wpcf7-form.failed.wpcf7-response-output  {
+    position: absolute;
+    top: -40%;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    border: 2px solid #00a0d2;
+}
+.wpcf7-form.failed.wpcf7-response-output{
+    border: 2px solid #E4020F;
+}
+
+.wpcf7-not-valid{
+    border: 1px solid #E4020F;
+    box-shadow: 0px 1px 2px #E4020F;
+}
+.wpcf7-not-valid-tip {
+    position: absolute;
+    position: absolute;
+    top: -25px;
+    /* text-align: center; */
+    right: -5px;
+    background: #E4020F;
+    color: #fff;
+    font-size: 12px;
+    padding: 7px;
+    border-radius: 3px;
+}
+
 .footer-form__name::placeholder, .footer-form__tel::placeholder{
     color: rgba(200,158,84,.7);
 }
