@@ -21,10 +21,16 @@ Container::make('post_meta', 'Контент для страницы')
         ->set_width(60),
         Field::make( 'text', 'crb_video_link', 'Ссылка на видео' ),
         Field::make('text', 'crb_about', 'Информация о Winning'),
-        Field::make('text', 'crb_delivery_text1', 'Текст о доставке часть 1')
-        ->set_width(50),
-        Field::make('text', 'crb_delivery_text2', 'Текст о доставке часть 2')
-        ->set_width(50),
+        // Field::make('text', 'crb_delivery_text1', 'Текст о доставке часть 1')
+        // ->set_width(50),
+        // Field::make('text', 'crb_delivery_text2', 'Текст о доставке часть 2')
+        // ->set_width(50),
+        Field::make('complex', 'crb_delivery_info')
+        ->set_classes('del_items')
+        ->add_fields( array (
+            Field::make('image', 'crb_delivery_img', 'Иконка'),
+            Field::make('text', 'crb_delivery_text', 'Текст о доставке')
+        )),
         Field::make( 'media_gallery', 'crb_hero_video', 'Видео для первого экрана' )
          ->set_type( 'video' )
     ))

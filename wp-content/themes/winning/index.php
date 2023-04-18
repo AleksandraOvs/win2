@@ -105,30 +105,30 @@
     </div>
   </section>
 
+  <?php if($del_items = carbon_get_post_meta(get_the_ID(), 'crb_delivery_info' ) ) { ?>
   <section class="delivery section _pb-0" id="delivery">
     <div class="container">
       <div class="delivery__title title">
         Доставка и гарантия
       </div>
+
       <div class="delivery__inner">
+        <?php foreach ($del_items as $del_item) { ?>
         <div class="delivery__item">
-          <img class="delivery__img" width="90" height="90" src="<?php echo get_stylesheet_directory_uri()?>/images/icon/punkt.svg" alt="punkt">
+          <?php
+              $del_img_url = wp_get_attachment_image_url($del_item['crb_delivery_img'], 'full');
+            ?>
+          <img class="delivery__img" width="90" height="90" src="<?php echo $del_img_url; ?>" >
           <div class="delivery__text">
-            Отправляем любым доступным и удобным для вас способом! Так же есть возможность самовывоза из нашего офиса в
-            Москве.
+            <?php echo $del_item['crb_delivery_text']; ?>
           </div>
         </div>
-        <div class="delivery__item">
-          <img class="delivery__img" width="90" height="90" src="<?php echo get_stylesheet_directory_uri()?>/images/icon/punkt.svg" alt="punkt">
-          <div class="delivery__text">
-            Мы проверяем каждое изделие перед отправкой не смотря на то что специалисты компании Winning неоднократно
-            проверяют каждое изделие перед каждой продажей.
-          </div>
-        </div>
+      
+        <?php } ?>
       </div>
     </div>
   </section>
-
+<?php } ?>
 
   <?php if($fdb_items = carbon_get_post_meta(get_the_ID(), 'feedbacks' ) ) { ?>
   <section class="reviews section _pb-0" id="reviews">

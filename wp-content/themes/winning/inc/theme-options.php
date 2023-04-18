@@ -46,7 +46,13 @@ Container::make('theme_options', 'Настройки сайта')
             Field::make('text', 'footer_tel_contact', 'Номер телефона')
                 ->set_width(50)
                 ->help_text('Номер телефона, отображающийся на сайте'),
-        ))
+        )),
+        Field::make('complex', 'footer_contacts_pays', 'Методы оплаты')
+        ->add_fields( array (
+            Field::make('image', 'footer_contacts_pays_img', 'Иконка метода оплаты')
+        )),
+    Field::make('text', 'footer_contacts_name', 'Название'),
+    Field::make('text', 'footer_contacts_address', 'Адрес')
    
 ))
 

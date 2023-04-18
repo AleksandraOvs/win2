@@ -348,7 +348,7 @@
 .cf-complex__groups.ui-sortable {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 
 }
 

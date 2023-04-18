@@ -4,38 +4,7 @@
 
   <div class="container">
     <div class="footer__inner">
-
-      <div class="footer__logo-inner">
-        <a href="/" class="footer__logo logo">
-
-          <?php
-          $footer_logo = get_theme_mod('footer_logo');
-          $img = wp_get_attachment_image_src($footer_logo, 'full');
-          if ($img) :
-            ?>
-            <img src="<?php echo $img[0]; ?>" alt="">
-          <?php endif; ?>
-        </a>
-
-      </div>
-
-      <div class="footer__menu-inner">
-
-        <?php 
-        if( has_nav_menu( 'foot_menu' )) {
-          wp_nav_menu( array(
-            'theme_location' => 'foot_menu',
-            'container' => 'nav',
-            'container_class' => 'footer__menu',
-            'items_wrap' => '<ul class="footer__menu-list">%3$s</ul>',
-                        //'depth' => 2,
-                        //'walker' => new Site_Nav()
-          ));
-        }
-        ?>   
-      </div>
-
-      <div class="footer__contact-inner">
+      <div class="footer__inner__contacts">
         <?php 
         if( $contacts = carbon_get_theme_option('footer_contacts' ) ) {
           ?>
@@ -59,6 +28,64 @@
         }
         ?>
 
+        <?php if( $contacts_pays = carbon_get_theme_option('footer_contacts_pays' ) ) {
+          ?>
+        <ul class="footer__inner__contacts__paymethods">
+        <?php
+            foreach( $contacts_pays as $contacts_pay ) {
+              ?>
+          <li class="footer__inner__contacts__paymethods__item">
+          <?php
+                  $pay_url = wp_get_attachment_image_url($contacts_pay['footer_contacts_pays_img'], 'full' );
+                  ?>
+                  <?php //echo $pay_url; ?>
+                  <img src="<?php echo $pay_url; ?>" alt="pay method" />
+          </li>
+        <?php } ?>
+        </ul>
+          <?php } ?>
+        <div class="footer__inner__contacts__about">
+          <p class="footer__inner__contacts__about__name">
+            <?php echo carbon_get_theme_option('footer_contacts_name')?>
+          </p>
+          <p class="footer__inner__contacts__about__address">
+            <?php echo carbon_get_theme_option('footer_contacts_address')?>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer__menu-inner">
+        <?php 
+        if( has_nav_menu( 'foot_menu' )) {
+          wp_nav_menu( array(
+            'theme_location' => 'foot_menu',
+            'container' => 'nav',
+            'container_class' => 'footer__menu',
+            'items_wrap' => '<ul class="footer__menu-list">%3$s</ul>',
+                        //'depth' => 2,
+                        //'walker' => new Site_Nav()
+          ));
+        }
+        ?>   
+      </div>
+
+      <div class="footer__logo">
+      
+        <?php
+          $footer_logo = get_theme_mod('footer_logo');
+          $img = wp_get_attachment_image_src($footer_logo, 'full');
+          if ($img) :
+        ?>
+        <img src="<?php echo $img[0]; ?>" alt="">
+        <?php endif; ?>
+        <div class="footer__logo__sign">
+          <p>Winning Moscow</p>
+          <p>г.Москва, ул.Восточная 5</p>
+        </div>
+      </div>
+      
+      <div class="footer__form">
+        <?php echo do_shortcode('[contact-form-7 id="136" title="footer-form"]'); ?>
         <?php if ($tels = carbon_get_theme_option('footer_contacts_tel')){
           
           foreach ($tels as $tel){
@@ -70,20 +97,18 @@
             
           }
 
-        }
+        } 
     ?>
-
-
-
-        
-     </div> 
+      </div>
    </div>
+
    <div class="footer__copyright">
-    <?php bloginfo( 'name' ); ?> — <?php the_date('Y'); ?>© ALL RIGHTS RESERVED
+    <?php bloginfo( 'name' ); ?> — <?php the_date('Y'); ?>© Все права защищены
   </div>
-  <a class="footer__politics footer__copyright popup--link" href="#politics">
+  <!-- <a class="footer__politics footer__copyright popup--link" href="#politics">
     Политика конфиденциальности
-  </a>
+  </a> -->
+
 </div>
 
 </footer>
