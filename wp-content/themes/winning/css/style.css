@@ -1038,7 +1038,7 @@ body {
         left: auto;
         width: 168px;
         height: 259px;
-        right: -20px;
+        right: -19px;
     }
     .about__text {
         max-width: 80%;
@@ -1123,10 +1123,17 @@ body {
     }
 }
 @media (max-width:768px){
-    .about__inner::before {
+       /* .about__inner::before {
         background-image: url(../images/about/dec3.png);
         top: -160px;
-        display:none;
+     display:none; 
+    }*/
+    .about__inner::before {
+        top: -163px;
+        left: auto;
+        width: 168px;
+        height: 259px;
+        right: -15px;
     }
 }
 .reviews__slide {
