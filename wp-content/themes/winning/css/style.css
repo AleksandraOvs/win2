@@ -992,8 +992,8 @@ body {
     background: -o-linear-gradient(186.25deg, #63abf3 3%, #3600d3 101.75%);
     background: linear-gradient(263.75deg, #63abf3 3%, #3600d3 101.75%);
     color: #fff;
-    -webkit-box-shadow: 0 0 13px rgba(0, 0, 0, 0.25);
-    /* box-shadow: 0 0 13px rgba(0, 0, 0, 0.25); */
+      /*-webkit-box-shadow: 0 0 13px rgba(0, 0, 0, 0.25);
+   box-shadow: 0 0 13px rgba(0, 0, 0, 0.25); */
 }
 .about:before{
     background-color: #63abf3;
@@ -1038,7 +1038,7 @@ body {
         left: auto;
         width: 168px;
         height: 259px;
-        right: -30px;
+        right: -20px;
     }
     .about__text {
         max-width: 80%;
@@ -1126,7 +1126,7 @@ body {
     .about__inner::before {
         background-image: url(../images/about/dec3.png);
         top: -160px;
-        display:none;
+        /* display:none; */
     }
 }
 .reviews__slide {
