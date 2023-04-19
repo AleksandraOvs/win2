@@ -66,7 +66,7 @@
 
       ?>
 
-      <video class="promo__video" pip="false" video autoplay loop muted playsinline webkit-playinginline poster="<?php echo get_stylesheet_directory_uri() . '/images/promo.jpg'?>">
+      <video class="promo__video" pip="false" video autoplay loop muted playsinline webkit-playinginline >
 
       <?php 
 
