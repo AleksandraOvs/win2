@@ -1126,7 +1126,7 @@ body {
     .about__inner::before {
         background-image: url(../images/about/dec3.png);
         top: -160px;
-        /* display:none; */
+        display:none;
     }
 }
 .reviews__slide {
