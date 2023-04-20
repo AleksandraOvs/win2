@@ -2014,3 +2014,8 @@ body {
         margin-bottom: 45px;
     }
 }
+
+
+.about-list__item{
+    list-style:circle;
+}
