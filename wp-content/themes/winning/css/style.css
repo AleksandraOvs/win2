@@ -1008,7 +1008,7 @@ body {
     background-image: url("../images/about/dec2.png");
 }
 .about__inner::before {
-    left: -55%;
+    left: -60%;
     top: -25%;
     width: 500px;
     height: 454px;
@@ -2013,9 +2013,4 @@ body {
     .footer__social {
         margin-bottom: 45px;
     }
-}
-
-
-.about-list__item{
-    list-style:circle;
 }
