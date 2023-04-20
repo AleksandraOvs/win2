@@ -20,7 +20,7 @@ Container::make('post_meta', 'Контент для страницы')
         ->help_text( 'Отображается на экранах меньше 768px' )
         ->set_width(60),
         Field::make( 'text', 'crb_video_link', 'Ссылка на видео' ),
-        Field::make('text', 'crb_about', 'Информация о Winning'),
+        Field::make('rich_text', 'crb_about', 'Информация о Winning'),
         // Field::make('text', 'crb_delivery_text1', 'Текст о доставке часть 1')
         // ->set_width(50),
         // Field::make('text', 'crb_delivery_text2', 'Текст о доставке часть 2')
