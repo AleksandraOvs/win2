@@ -253,7 +253,7 @@
             $photos = get_field('photos', 'categories_'.$term_id, 'option');
               // $colors = get_field('category_colors', 'categories_'.$term_id, 'option');
             $razmeri = get_field('category_razmeri', 'categories_'.$term_id, 'option');
-
+            $price = get_field('category_price', 'categories_'.$term_id, 'option');
               // print_r($photos);
               // print_r($colors);
               // print_r($razmeri);
@@ -341,6 +341,17 @@
                     ?>
                     
                   </div>
+                
+                  <?php if (!empty(get_field('category_price', 'categories_'.$term_id, 'option') ) ){
+                    ?>
+                        <div class="products__price">
+                    <p><?php echo $price; ?><span>&nbsp;руб.</span></p>
+                  </div>
+                  
+                    <?php
+                  }
+                  ?>
+                 
                   <a class="products__link btn popup--link" href="#popup">
                     оформить заказ
                   </a>
@@ -362,7 +373,7 @@
 
     <div class="products__slider-rule">
       <div class="products__slider-arrow">
-        <img class="products__slider-arrow-img products__slider-arrow_prev slick-arrow" src="<?php echo get_template_directory_uri();?>/images/icon/arrow-prev.svg" width="13" height="28" alt="arrow" aria-disabled="false" style="">
+        <img class="products__slider-arrow-img products__slider-arrow_prev slick-arrow" src="<?php echo get_template_directory_uri();?>/images/icon/arrow-prev.svg" width="56" height="26" alt="arrow" aria-disabled="false" style="">
       </div>
       <div class="products__slider-dots">
         <ul class="slick-dots" role="tablist" style="">
@@ -373,7 +384,7 @@
         </ul>
       </div>
       <div class="products__slider-arrow products__slider-arrow_next slick-arrow" aria-disabled="false" style="">
-        <img class="products__slider-arrow-img" src="<?php echo get_template_directory_uri();?>/images/icon/arrow-prev.svg" width="13" height="28" alt="arrow">
+        <img class="products__slider-arrow-img" src="<?php echo get_template_directory_uri();?>/images/icon/arrow-prev.svg" width="56" height="26" alt="arrow">
       </div>
     </div>
   </section>
